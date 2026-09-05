@@ -422,6 +422,8 @@
     margin-top:48px;
   }
 
+  .halfway + .grid-2{margin-top:0;}
+
   @media (max-width:768px){
     .grid-2{grid-template-columns:1fr; gap:16px;}
   }
@@ -479,6 +481,7 @@
   /* Traka na pola puta */
   .halfway{
     margin-top:24px;
+    margin-bottom:24px;
     background:var(--brand-soft);
     border-radius:12px;
     text-align:center;
@@ -1050,13 +1053,13 @@
   <div class="ticker">
     <div class="ticker-track">
       <div class="ticker-item">Danas se upišeš, obuka kreće odmah<span class="ticker-dot"></span></div>
-      <div class="ticker-item hl">Nema čekanja na novu grupu<span class="ticker-dot"></span></div>
+      <div class="ticker-item hl">Ne čekaš da se skupi grupa<span class="ticker-dot"></span></div>
       <div class="ticker-item">Golubačka 4, Vračar<span class="ticker-dot"></span></div>
       <div class="ticker-item hl">Radnim danima 09:00 - 20:00<span class="ticker-dot"></span></div>
       <div class="ticker-item">Voziš na Toyoti Yaris<span class="ticker-dot"></span></div>
       <div class="ticker-item hl">011/3860 666<span class="ticker-dot"></span></div>
       <div class="ticker-item">Danas se upišeš, obuka kreće odmah<span class="ticker-dot"></span></div>
-      <div class="ticker-item hl">Nema čekanja na novu grupu<span class="ticker-dot"></span></div>
+      <div class="ticker-item hl">Ne čekaš da se skupi grupa<span class="ticker-dot"></span></div>
       <div class="ticker-item">Golubačka 4, Vračar<span class="ticker-dot"></span></div>
       <div class="ticker-item hl">Radnim danima 09:00 - 20:00<span class="ticker-dot"></span></div>
       <div class="ticker-item">Voziš na Toyoti Yaris<span class="ticker-dot"></span></div>
@@ -1293,7 +1296,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-9A8.4 8.4 0 1 1 21 11.5z"></path></svg>
           </div>
           <h3>Broj koji možeš da zoveš i posle</h3>
-          <p><strong>U svakom trenutku</strong> možeš da nas pitaš ako imaš neku saobraćajnu dilemu. Kad ti nešto zapne posle dozvole, zoveš i pitaš, mi smo i dalje u Golubačkoj 4.</p>
+          <p>Zovi kad god zapneš oko nekog propisa ili situacije na putu. I posle položenog ispita smo tu, u Golubačkoj 4.</p>
         </div>
 
       </div>
@@ -1334,7 +1337,7 @@
   <section class="section" id="pitanja">
     <div class="wrap">
       <div class="head center narrow">
-        <span class="pill">Pitanja i odgovori</span>
+        <span class="pill">Pre nego što se upišeš</span>
         <h2>Česta <span class="accent">pitanja</span></h2>
       </div>
 
@@ -1343,21 +1346,21 @@
 
           <details open>
             <summary>
-              Sa koliko godina mogu da počnem sa obukom?
+              Koliko godina moram da imam za upis?
               <span class="toggle" aria-hidden="true"></span>
             </summary>
             <div class="answer">
-              <p>Obuku možeš da počneš sa 16 godina i tada možeš i da polažeš teorijski ispit. Vožnja se polaže kada napuniš 17 godina, i tada dobijaš probnu vozačku dozvolu.</p>
+              <p>Teoriju možeš da slušaš i polažeš od 16. godine. Vožnja se polaže od 17, i sa položenim ispitom dobijaš probnu dozvolu.</p>
             </div>
           </details>
 
           <details>
             <summary>
-              Koliko traje obuka i kada mogu da počnem?
+              Koliko obuka traje i kada krećem?
               <span class="toggle" aria-hidden="true"></span>
             </summary>
             <div class="answer">
-              <p>Nema čekanja na novu grupu. Obuku počinješ odmah posle upisa, a prvi termin dogovaramo za tu nedelju.</p>
+              <p>Krećeš odmah po upisu, prvi termin ide u toj istoj nedelji. Ne postoji lista čekanja ni datum kad se otvara sledeći kurs.</p>
               <p>Traje dva do tri meseca, zavisno od tvojih obaveza. Ako ti se žuri, zakazujemo gušće. Preskakanje časova nije dozvoljeno, broj časova propisan je zakonom.</p>
             </div>
           </details>
@@ -1368,8 +1371,8 @@
               <span class="toggle" aria-hidden="true"></span>
             </summary>
             <div class="answer">
-              <p>Cenu obuke propisuje Vlada Srbije i ista je u svim auto školama. Za plaćanje na rate se dogovaramo pri upisu, pozovi 011/3860 666 za tačan iznos i uslove.</p>
-              <p>Ako imaš 18 godina, ugovor potpisuješ ti. Ako nemaš, dolaziš sa roditeljem ili starateljem.</p>
+              <p>Cena obuke je propisana državnom uredbom, pa je svuda identična. Razlika je jedino u tome šta dobiješ za taj novac.</p>
+              <p>Punoletni kandidati potpisuju ugovor sami, maloletnima ga potpisuje roditelj ili staratelj. Za rate se dogovaramo na upisu, pozovi 011/3860 666 za iznos i uslove.</p>
             </div>
           </details>
 
@@ -1379,11 +1382,11 @@
 
           <details open>
             <summary>
-              Kako to da su neke auto škole jeftinije?
+              Zašto su neke škole jeftinije od drugih?
               <span class="toggle" aria-hidden="true"></span>
             </summary>
             <div class="answer">
-              <p>Najčešće tako što skrate obuku i preskoče vožnju koja se ne polaže na ispitu. To se gotovo uvek obije o glavu kandidatu, kroz ponovno polaganje ili kroz strah od gustog saobraćaja posle dozvole.</p>
+              <p>Uštede se obično prave na časovima vožnje koji se ne pojavljuju na ispitu. Cena je manja, ali kandidat to plati kasnije, kroz popravni ili kroz strah od gustog saobraćaja.</p>
             </div>
           </details>
 
@@ -1400,12 +1403,12 @@
 
           <details>
             <summary>
-              Gde se nalazite i kako da se upišem?
+              Gde ste i šta mi treba za upis?
               <span class="toggle" aria-hidden="true"></span>
             </summary>
             <div class="answer">
-              <p>Golubačka 4 na Vračaru. Pozoveš 011/3860 666 pa dogovorimo termin, a možeš i da svratiš radnim danom od 9 do 20.</p>
-              <p>Potrebna je samo lična karta, a maloletni kandidati dolaze sa roditeljem ili starateljem. Upis traje pola sata.</p>
+              <p>Golubačka 4 na Vračaru, radnim danom od 9 do 20. Javi se na 011/3860 666 pa dogovorimo termin, ili jednostavno svrati.</p>
+              <p>Ponesi ličnu kartu, maloletni dolaze u pratnji roditelja. Papirologija se završi za pola sata.</p>
             </div>
           </details>
 
@@ -1494,7 +1497,7 @@
         <div class="cta-copy">
           <span class="cta-eyebrow">Spreman da sedneš za volan?</span>
           <h2>Upiši se ove nedelje</h2>
-          <p>Pozovi ili svrati u Golubačku 4. Dogovaramo prvi termin odmah po upisu, bez čekanja na novu grupu.</p>
+          <p>Pozovi ili svrati u Golubačku 4. Prvi termin dogovaramo odmah po upisu, bez liste čekanja.</p>
           <div class="btn-row">
             <a href="#kontakt" class="btn">
               <svg width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12z"></path></svg>
