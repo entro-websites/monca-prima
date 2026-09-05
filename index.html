@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto škola Monca Prima – obuka vozača B kategorije, Vračar</title>
-<meta name="description" content="Auto škola Monca Prima na Vračaru, Golubačka 4. Obuka vozača B kategorije, teorija i praktična vožnja, priprema za ispit.">
+<title>Auto škola Monca Prima - B kategorija na Vračaru, bez čekanja na grupu</title>
+<meta name="description" content="Auto škola Monca Prima, Golubačka 4 na Vračaru. Upišeš se danas, obuka kreće odmah. Teorija, vožnja i izlazak na ispit za B kategoriju.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,12 +12,11 @@
   :root{
     --primary:#d60000;
     --primary-dark:#a80000;
-    --dark:#1a1a1a;
+    --dark:#151515;
     --gray:#5a5a5a;
-    --bg:#faf9f7;
-    --bg-alt:#f2efec;
-    --border:#e2ddd8;
-    --white:#ffffff;
+    --bg:#ffffff;
+    --bg-alt:#f6f4f2;
+    --border:#e0dcd8;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -33,41 +32,30 @@
     overflow-x:hidden;
   }
 
-  h1, h2, h3{
+  h1, h2, h3, h4{
     font-family:'Oswald', sans-serif;
     font-weight:600;
     text-transform:uppercase;
     letter-spacing:0.5px;
+    line-height:1.1;
     color:var(--dark);
   }
 
-  p{
-    max-width:65ch;
-  }
-
-  a{
-    color:inherit;
-    text-decoration:none;
-  }
-
-  img{
-    display:block;
-    max-width:100%;
-    height:auto;
-  }
+  p{max-width:65ch;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%; height:auto;}
+  ul{list-style:none;}
 
   .wrap{
     max-width:1280px;
-    margin:0 auto;
+    margin-left:auto;
+    margin-right:auto;
     padding-left:24px;
     padding-right:24px;
   }
 
   @media (max-width:768px){
-    .wrap{
-      padding-left:20px;
-      padding-right:20px;
-    }
+    .wrap{padding-left:20px; padding-right:20px;}
   }
 
   .section{
@@ -76,10 +64,7 @@
   }
 
   @media (max-width:768px){
-    .section{
-      padding-top:64px;
-      padding-bottom:64px;
-    }
+    .section{padding-top:64px; padding-bottom:64px;}
   }
 
   .section-alt{
@@ -89,6 +74,7 @@
   }
 
   .eyebrow{
+    display:block;
     color:var(--primary);
     font-family:'Oswald', sans-serif;
     font-weight:600;
@@ -96,83 +82,87 @@
     text-transform:uppercase;
     font-size:14px;
     margin-bottom:12px;
-    display:block;
   }
 
-  .section h2{
-    font-size:clamp(28px, 4vw, 40px);
-    margin-bottom:20px;
+  h2{font-size:clamp(28px, 4vw, 44px);}
+
+  .section-head{
+    max-width:680px;
+    margin-bottom:64px;
   }
 
-  .section-intro{
-    max-width:640px;
-    margin-bottom:56px;
-  }
-
-  .section-intro p{
+  .section-head p{
     color:var(--gray);
-    font-size:17px;
+    font-size:18px;
+    margin-top:16px;
   }
 
-  /* Buttons */
+  /* Dugmad */
   .btn{
     display:inline-block;
-    padding:14px 32px;
-    border-radius:8px;
     font-family:'Oswald', sans-serif;
     font-weight:600;
     text-transform:uppercase;
-    letter-spacing:0.5px;
-    font-size:15px;
-    border:2px solid transparent;
-    cursor:pointer;
-    transition:background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .btn-primary{
+    letter-spacing:1px;
+    font-size:16px;
+    padding-top:14px;
+    padding-bottom:14px;
+    padding-left:32px;
+    padding-right:32px;
+    border-radius:8px;
+    border:1px solid var(--primary);
     background:var(--primary);
-    color:var(--white);
-    border-color:var(--primary);
+    color:#ffffff;
+    cursor:pointer;
+    transition:background .15s ease, border-color .15s ease;
   }
 
-  .btn-primary:hover{
-    background:var(--primary-dark);
-    border-color:var(--primary-dark);
-  }
+  .btn:hover{background:var(--primary-dark); border-color:var(--primary-dark);}
 
-  .btn-outline{
-    background:transparent;
-    color:var(--dark);
-    border-color:var(--dark);
-  }
-
-  .btn-outline:hover{
+  /* Traka iznad navigacije */
+  .topbar{
     background:var(--dark);
-    color:var(--white);
+    color:#ffffff;
+    font-size:14px;
   }
 
-  /* Navbar */
+  .topbar-inner{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 24px;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+
+  .topbar strong{
+    font-family:'Oswald', sans-serif;
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+
+  .topbar a:hover{color:#ffffff;}
+
+  /* Navigacija */
   .navbar{
     position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    background:var(--white);
+    z-index:50;
+    background:#ffffff;
     border-bottom:1px solid var(--border);
-    z-index:1000;
   }
 
   .navbar-inner{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    height:84px;
+    padding-top:16px;
+    padding-bottom:16px;
   }
 
-  .logo img{
-    height:52px;
-    width:auto;
-  }
+  .logo img{height:44px; width:auto;}
 
   .nav-links{
     display:flex;
@@ -183,159 +173,134 @@
   .nav-links a{
     font-family:'Oswald', sans-serif;
     font-weight:500;
-    font-size:15px;
     text-transform:uppercase;
-    letter-spacing:0.5px;
-    color:var(--dark);
-    transition:color 0.2s ease;
+    letter-spacing:1px;
+    font-size:15px;
   }
 
-  .nav-links a:hover{
-    color:var(--primary);
-  }
-
-  .nav-cta{
-    padding:12px 26px;
-    font-size:14px;
-  }
+  .nav-links a:hover{color:var(--primary);}
 
   .hamburger{
     display:none;
-    flex-direction:column;
-    justify-content:space-between;
-    width:28px;
-    height:20px;
-    background:transparent;
-    border:none;
+    width:44px;
+    height:44px;
+    background:none;
+    border:1px solid var(--border);
+    border-radius:8px;
     cursor:pointer;
-    padding:0;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
   }
 
   .hamburger span{
     display:block;
-    width:100%;
+    width:20px;
     height:2px;
     background:var(--dark);
-    transition:transform 0.2s ease, opacity 0.2s ease;
   }
 
-  .hamburger.active span:nth-child(1){
-    transform:translateY(9px) rotate(45deg);
-  }
-  .hamburger.active span:nth-child(2){
-    opacity:0;
-  }
-  .hamburger.active span:nth-child(3){
-    transform:translateY(-9px) rotate(-45deg);
-  }
-
-  .mobile-menu{
-    display:none;
-    flex-direction:column;
-    background:var(--white);
-    border-bottom:1px solid var(--border);
-    max-height:0;
-    overflow:hidden;
-    transition:max-height 0.25s ease;
-  }
-
-  .mobile-menu.open{
-    max-height:500px;
-  }
-
-  .mobile-menu a{
-    padding:16px 24px;
-    border-top:1px solid var(--border);
-    font-family:'Oswald', sans-serif;
-    font-weight:500;
-    text-transform:uppercase;
-    font-size:15px;
-    letter-spacing:0.5px;
-  }
-
-  .mobile-menu .btn{
-    margin:16px 24px 20px;
-    text-align:center;
-  }
+  .mobile-menu{display:none;}
 
   @media (max-width:991px){
-    .nav-links, .nav-cta{
-      display:none;
-    }
-    .hamburger{
-      display:flex;
-    }
+    .nav-links, .nav-cta{display:none;}
+    .hamburger{display:flex;}
+
     .mobile-menu{
-      display:flex;
+      display:none;
+      border-top:1px solid var(--border);
+      padding-top:16px;
+      padding-bottom:24px;
+    }
+
+    .mobile-menu.open{display:block;}
+
+    .mobile-menu a{
+      display:block;
+      font-family:'Oswald', sans-serif;
+      font-weight:500;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      padding-top:12px;
+      padding-bottom:12px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .mobile-menu .btn{
+      display:block;
+      text-align:center;
+      border-bottom:none;
+      margin-top:16px;
     }
   }
 
   /* Hero */
   .hero{
-    position:relative;
-    background-image:linear-gradient(180deg, rgba(10,10,10,0.55), rgba(10,10,10,0.72)), url('assets/01-SAJT-naslovna.jpg');
-    background-size:cover;
-    background-position:center;
-    color:var(--white);
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding-top:110px;
-    padding-bottom:110px;
+    padding-top:80px;
+    padding-bottom:80px;
+    border-bottom:1px solid var(--border);
   }
 
-  @media (max-width:768px){
-    .hero{
-      min-height:80vh;
-      padding-top:72px;
-      padding-bottom:72px;
-    }
-  }
-
-  .hero-content{
-    max-width:680px;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
     align-items:center;
   }
 
-  .hero h1{
-    color:var(--white);
-    font-size:clamp(48px, 8vw, 68px);
-    line-height:1.08;
+  .badge{
+    display:inline-block;
+    font-family:'Oswald', sans-serif;
+    font-size:13px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--primary);
+    border:1px solid var(--primary);
+    border-radius:8px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-left:12px;
+    padding-right:12px;
     margin-bottom:24px;
   }
 
+  .hero h1{
+    font-size:clamp(38px, 5.5vw, 64px);
+    font-weight:700;
+    margin-bottom:24px;
+  }
+
+  .hero h1 .accent{color:var(--primary);}
+
   .hero-sub{
-    color:#f0ede9;
-    font-size:18px;
-    max-width:52ch;
-    margin-bottom:36px;
+    font-size:19px;
+    color:var(--gray);
+    margin-bottom:32px;
   }
 
   .hero-meta{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    gap:24px;
-    margin-top:40px;
-    font-size:14px;
-    color:#e6e2dd;
+    gap:12px 32px;
+    margin-top:32px;
+    padding-top:24px;
+    border-top:1px solid var(--border);
+    font-size:15px;
+    color:var(--gray);
   }
 
-  .hero-meta span{
-    display:flex;
-    align-items:center;
-    gap:8px;
+  .hero-meta span{display:flex; align-items:center; gap:8px;}
+  .hero-meta svg{stroke:var(--primary); flex-shrink:0;}
+
+  .hero-image img{
+    border-radius:8px;
+    border:1px solid var(--border);
+    width:100%;
   }
 
-  .hero-meta svg{
-    width:18px;
-    height:18px;
-    flex-shrink:0;
-    stroke:var(--primary);
+  @media (max-width:991px){
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
   }
 
   /* O nama */
@@ -346,251 +311,202 @@
     align-items:center;
   }
 
-  .about-text p{
-    color:var(--gray);
-    margin-bottom:18px;
-    font-size:16px;
+  .about-text h2{margin-bottom:24px;}
+
+  .about-text p{margin-bottom:20px; color:var(--gray); font-size:17px;}
+  .about-text p:last-child{margin-bottom:0;}
+  .about-text strong{color:var(--dark);}
+
+  .about-image img{border-radius:8px; border:1px solid var(--border); width:100%;}
+
+  @media (max-width:991px){
+    .about-grid{grid-template-columns:1fr; gap:40px;}
   }
 
-  .about-text p:last-child{
-    margin-bottom:0;
-  }
-
-  .about-image{
-    border:1px solid var(--border);
-    border-radius:8px;
-    overflow:hidden;
-  }
-
-  .about-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
-
-  @media (max-width:900px){
-    .about-grid{
-      grid-template-columns:1fr;
-      gap:36px;
-    }
-  }
-
-  /* Cards grid - obuka */
-  .cards-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:32px;
-  }
-
-  .card{
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:8px;
-    padding-top:32px;
-    padding-bottom:32px;
-    padding-left:28px;
-    padding-right:28px;
-  }
-
-  .card-icon{
-    width:44px;
-    height:44px;
-    margin-bottom:20px;
-    stroke:var(--primary);
-  }
-
-  .card h3{
-    font-size:20px;
-    margin-bottom:12px;
-  }
-
-  .card p{
-    color:var(--gray);
-    font-size:15px;
-  }
-
-  @media (max-width:900px){
-    .cards-grid{
-      grid-template-columns:1fr;
-    }
-  }
-
-  /* Zasto mi - list w/ icons */
-  .why-grid{
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-    gap:64px;
-    align-items:center;
-  }
-
-  .why-list{
-    list-style:none;
-  }
-
-  .why-list li{
-    display:flex;
-    gap:16px;
-    padding-top:22px;
-    padding-bottom:22px;
+  /* Tvoj put */
+  .steps{
     border-top:1px solid var(--border);
   }
 
-  .why-list li:last-child{
+  .step{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:32px;
+    padding-top:40px;
+    padding-bottom:40px;
     border-bottom:1px solid var(--border);
   }
 
-  .why-list svg{
-    width:26px;
-    height:26px;
-    flex-shrink:0;
-    stroke:var(--primary);
-    margin-top:2px;
+  .step-num{
+    font-family:'Oswald', sans-serif;
+    font-size:56px;
+    font-weight:700;
+    line-height:1;
+    color:var(--primary);
   }
 
-  .why-list h3{
-    font-size:17px;
-    margin-bottom:6px;
-    text-transform:none;
-    letter-spacing:0;
+  .step h3{font-size:24px; margin-bottom:12px;}
+  .step p{color:var(--gray); margin-bottom:12px;}
+  .step p:last-child{margin-bottom:0;}
+
+  @media (max-width:768px){
+    .step{grid-template-columns:1fr; gap:12px;}
+    .step-num{font-size:40px;}
   }
 
-  .why-list p{
-    color:var(--gray);
-    font-size:15px;
-    max-width:50ch;
+  /* CTA traka */
+  .cta-band{
+    background:var(--dark);
+    padding-top:80px;
+    padding-bottom:80px;
   }
 
-  .why-image{
-    border:1px solid var(--border);
-    border-radius:8px;
-    overflow:hidden;
-  }
+  .cta-band h2{color:#ffffff; margin-bottom:16px;}
+  .cta-band p{color:#c8c4c0; font-size:18px; margin-bottom:32px;}
 
-  .why-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-  }
-
-  @media (max-width:900px){
-    .why-grid{
-      grid-template-columns:1fr;
-      gap:36px;
-    }
-    .why-grid .why-image{
-      order:-1;
-    }
-  }
-
-  /* Galerija */
-  .gallery-grid{
+  /* Benefiti */
+  .cards{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
     gap:24px;
   }
 
-  .gallery-item{
+  .card{
     border:1px solid var(--border);
     border-radius:8px;
-    overflow:hidden;
-    aspect-ratio:4/3;
+    background:#ffffff;
+    padding-top:32px;
+    padding-bottom:32px;
+    padding-left:32px;
+    padding-right:32px;
   }
 
-  .gallery-item img{
+  .card svg{stroke:var(--primary); margin-bottom:16px;}
+  .card h3{font-size:20px; margin-bottom:12px;}
+  .card p{color:var(--gray); font-size:16px;}
+
+  @media (max-width:768px){
+    .cards{grid-template-columns:1fr;}
+  }
+
+  /* Galerija */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:24px;
+  }
+
+  .gallery img{
+    border-radius:8px;
+    border:1px solid var(--border);
     width:100%;
-    height:100%;
+    height:340px;
     object-fit:cover;
   }
 
-  @media (max-width:900px){
-    .gallery-grid{
-      grid-template-columns:1fr 1fr;
-    }
+  @media (max-width:768px){
+    .gallery{grid-template-columns:1fr;}
+    .gallery img{height:240px;}
   }
 
-  @media (max-width:560px){
-    .gallery-grid{
-      grid-template-columns:1fr;
-    }
-  }
-
-  /* Billboard strip */
-  .billboard{
+  /* Pitanja */
+  .faq{
+    max-width:860px;
     border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
   }
 
-  .billboard img{
-    width:100%;
-    height:auto;
-    display:block;
+  .faq details{border-bottom:1px solid var(--border);}
+
+  .faq summary{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    cursor:pointer;
+    list-style:none;
+    font-family:'Oswald', sans-serif;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-size:18px;
+    padding-top:24px;
+    padding-bottom:24px;
   }
+
+  .faq summary::-webkit-details-marker{display:none;}
+
+  .faq summary::after{
+    content:"+";
+    font-size:28px;
+    line-height:1;
+    color:var(--primary);
+    flex-shrink:0;
+  }
+
+  .faq details[open] summary::after{content:"-";}
+
+  .faq details p{
+    color:var(--gray);
+    padding-bottom:24px;
+    margin-bottom:0;
+  }
+
+  .faq details p + p{padding-top:12px;}
 
   /* Kontakt */
   .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:64px;
+    align-items:start;
   }
 
-  .contact-info-list{
-    list-style:none;
-    margin-top:28px;
-  }
+  .contact-list{margin-top:32px;}
 
-  .contact-info-list li{
+  .contact-list li{
     display:flex;
-    gap:14px;
+    align-items:flex-start;
+    gap:12px;
     padding-top:16px;
     padding-bottom:16px;
-    border-top:1px solid var(--border);
-    font-size:15px;
-  }
-
-  .contact-info-list li:last-child{
     border-bottom:1px solid var(--border);
+    font-size:16px;
   }
 
-  .contact-info-list svg{
-    width:20px;
-    height:20px;
-    flex-shrink:0;
-    stroke:var(--primary);
-    margin-top:2px;
-  }
+  .contact-list svg{stroke:var(--primary); flex-shrink:0; margin-top:4px;}
 
   .map-placeholder{
     margin-top:32px;
-    height:220px;
     background:var(--bg-alt);
-    border:1px dashed var(--border);
+    border:1px solid var(--border);
     border-radius:8px;
+    height:220px;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:var(--gray);
+    text-align:center;
     font-family:'Oswald', sans-serif;
     letter-spacing:1px;
     text-transform:uppercase;
+    color:var(--gray);
     font-size:14px;
-    text-align:center;
-    padding-left:16px;
-    padding-right:16px;
+    padding-left:24px;
+    padding-right:24px;
   }
 
-  .contact-form{
-    background:var(--white);
+  .form-box{
     border:1px solid var(--border);
     border-radius:8px;
-    padding-top:36px;
-    padding-bottom:36px;
-    padding-left:36px;
-    padding-right:36px;
+    background:var(--bg-alt);
+    padding-top:32px;
+    padding-bottom:32px;
+    padding-left:32px;
+    padding-right:32px;
   }
 
-  .form-group{
-    margin-bottom:20px;
-  }
+  .form-box h3{font-size:22px; margin-bottom:24px;}
+
+  .form-group{margin-bottom:20px;}
 
   .form-group label{
     display:block;
@@ -602,105 +518,75 @@
   .form-group input,
   .form-group textarea{
     width:100%;
-    padding:12px 14px;
+    font-family:'Open Sans', sans-serif;
+    font-size:16px;
+    color:var(--dark);
+    background:#ffffff;
     border:1px solid var(--border);
     border-radius:8px;
-    font-family:'Open Sans', sans-serif;
-    font-size:15px;
-    background:var(--bg);
-    color:var(--dark);
-  }
-
-  .form-group textarea{
-    resize:vertical;
-    min-height:110px;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:16px;
+    padding-right:16px;
   }
 
   .form-group input:focus,
-  .form-group textarea:focus{
-    outline:2px solid var(--primary);
-    outline-offset:1px;
-  }
+  .form-group textarea:focus{outline:2px solid var(--primary); outline-offset:-2px;}
 
-  @media (max-width:900px){
-    .contact-grid{
-      grid-template-columns:1fr;
-      gap:40px;
-    }
-    .contact-form{
-      padding-left:24px;
-      padding-right:24px;
-    }
+  .form-group textarea{min-height:120px; resize:vertical;}
+
+  .form-box .btn{width:100%;}
+
+  @media (max-width:991px){
+    .contact-grid{grid-template-columns:1fr; gap:40px;}
   }
 
   /* Footer */
   footer{
     background:var(--dark);
-    color:#d9d5d1;
+    color:#c8c4c0;
     padding-top:64px;
     padding-bottom:32px;
+    font-size:15px;
   }
 
   .footer-grid{
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
+    grid-template-columns:2fr 1fr 1fr;
     gap:48px;
-    padding-bottom:40px;
-    border-bottom:1px solid #3a3a3a;
+    padding-bottom:48px;
   }
 
-  .footer-logo img{
-    height:46px;
-    margin-bottom:16px;
-  }
+  .footer-logo img{height:52px; width:auto; margin-bottom:20px;}
+  .footer-logo p{max-width:40ch;}
 
-  .footer-grid p{
-    color:#b8b4b0;
-    font-size:14px;
-    max-width:40ch;
-  }
-
-  .footer-col h4{
-    font-family:'Oswald', sans-serif;
-    text-transform:uppercase;
-    font-size:15px;
-    letter-spacing:0.5px;
-    color:var(--white);
-    margin-bottom:16px;
-  }
-
-  .footer-col ul{
-    list-style:none;
-  }
-
-  .footer-col li{
-    margin-bottom:10px;
-    font-size:14px;
-  }
-
-  .footer-col a:hover{
-    color:var(--primary);
-  }
+  footer h4{color:#ffffff; font-size:16px; margin-bottom:20px;}
+  footer li{padding-top:6px; padding-bottom:6px;}
+  footer a:hover{color:#ffffff;}
 
   .footer-bottom{
-    padding-top:24px;
-    font-size:13px;
-    color:#8a8682;
     display:flex;
-    justify-content:space-between;
     flex-wrap:wrap;
-    gap:8px;
+    gap:12px 24px;
+    justify-content:space-between;
+    padding-top:24px;
+    border-top:1px solid #333030;
+    font-size:14px;
   }
 
   @media (max-width:768px){
-    .footer-grid{
-      grid-template-columns:1fr;
-      gap:32px;
-    }
+    .footer-grid{grid-template-columns:1fr; gap:32px;}
   }
 </style>
 </head>
 <body>
+
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <strong>Danas se upišeš, obuka kreće odmah</strong>
+      <span>Golubačka 4, Vračar &nbsp;/&nbsp; <a href="tel:+381113860666">011/3860 666</a></span>
+    </div>
+  </div>
 
   <header class="navbar">
     <div class="wrap navbar-inner">
@@ -708,41 +594,47 @@
         <img src="assets/monca-prima-logo-2024-1x.png" alt="Auto škola Monca Prima logo">
       </a>
       <nav class="nav-links">
-        <a href="#o-nama">O nama</a>
-        <a href="#obuka">Obuka</a>
-        <a href="#zasto-mi">Zašto mi</a>
-        <a href="#galerija">Galerija</a>
+        <a href="#o-nama">O školi</a>
+        <a href="#tvoj-put">Tvoj put</a>
+        <a href="#benefiti">Šta dobijaš</a>
+        <a href="#pitanja">Česta pitanja</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
-      <a href="#kontakt" class="btn btn-primary nav-cta">Zakaži čas</a>
+      <a href="#kontakt" class="btn nav-cta">Upiši se</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#o-nama">O nama</a>
-      <a href="#obuka">Obuka</a>
-      <a href="#zasto-mi">Zašto mi</a>
-      <a href="#galerija">Galerija</a>
+    <div class="wrap mobile-menu" id="mobileMenu">
+      <a href="#o-nama">O školi</a>
+      <a href="#tvoj-put">Tvoj put</a>
+      <a href="#benefiti">Šta dobijaš</a>
+      <a href="#pitanja">Česta pitanja</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="btn btn-primary">Zakaži čas</a>
+      <a href="#kontakt" class="btn">Upiši se</a>
     </div>
   </header>
 
   <section class="hero">
-    <div class="wrap hero-content">
-      <h1>Vozačka za B kategoriju, na Vračaru</h1>
-      <p class="hero-sub">Učimo vas da vozite, ne da samo ponovite trik za ispit. Naši instruktori vas vode kroz teoriju i vožnju korak po korak, u vašem tempu.</p>
-      <a href="#kontakt" class="btn btn-primary">Zakaži prvi čas</a>
-      <div class="hero-meta">
-        <span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-          Golubačka 4, Vračar, Beograd
-        </span>
-        <span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2z"></path></svg>
-          011/3860 666
-        </span>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge">Vračar, Golubačka 4</span>
+        <h1>B kategorija <span class="accent">bez čekanja</span> na novu grupu</h1>
+        <p class="hero-sub">Upišeš se ove nedelje, obuka kreće odmah posle toga. Teorija, vožnja i izlazak na ispit, sve kod nas na Vračaru.</p>
+        <a href="#kontakt" class="btn">Zakaži razgovor</a>
+        <div class="hero-meta">
+          <span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2z"></path></svg>
+            011/3860 666
+          </span>
+          <span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+            Radnim danima 09:00 - 20:00
+          </span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/01-SAJT-naslovna.jpg" alt="Vozilo auto škole Monca Prima u vožnji, uz logo škole i natpis Provezite svoj prvi krug">
       </div>
     </div>
   </section>
@@ -751,145 +643,247 @@
     <div class="wrap about-grid">
       <div class="about-text">
         <span class="eyebrow">Ko smo mi</span>
-        <h2>Škola vožnje sa adresom i imenom</h2>
-        <p>Auto škola Monca Prima radi na Vračaru, u Golubačkoj 4. Nismo filijala, nismo lanac – jedna smo škola, na jednoj adresi, i tu smo svaki radni dan.</p>
-        <p>Naši instruktori vas vode kroz vožnju bez žurbe. Ako vam treba više krugova oko parkinga pre nego što pređete na raskrsnicu, vozićemo dodatne krugove. Nema fiksnog kalupa – ima vaš tempo.</p>
-        <p>Kroz vrata škole prošlo je dosta generacija vozača iz kraja. Neki dovode i decu na obuku, godinama posle.</p>
+        <h2>Zdravo. Na pravom si mestu.</h2>
+        <p>Auto škola Monca Prima radi na Vračaru, u Golubačkoj 4. Nismo filijala i nismo lanac. Jedna smo škola, na jednoj adresi, i tu smo svaki radni dan od 9 do 20.</p>
+        <p>Kod nas ne učiš samo da prođeš ispit. Učiš da voziš kroz Beograd, jer ćeš posle dozvole voziti baš tu, u špicu na Slaviji i po uskim ulicama Vračara.</p>
+        <p>Kroz školu je prošlo dosta generacija iz kraja. Neki od njih sada dovode svoju decu na obuku.</p>
+        <p><strong>Ako biraš između par škola, svrati na kafu pre nego što se odlučiš.</strong> Nemaš nikakve obaveze posle toga.</p>
       </div>
       <div class="about-image">
-        <img src="assets/WhatsApp-Image-2025-11-11-at-18.17.19-1.jpeg" alt="Predavanje u učionici auto škole Monca Prima, instruktorka objašnjava kočioni sistem na projekciji">
+        <img src="assets/WhatsApp-Image-2025-11-11-at-18.17.19-1.jpeg" alt="Predavanje u učionici auto škole Monca Prima, instruktorka objašnjava gradivo uz projekciju">
       </div>
     </div>
   </section>
 
-  <section class="section section-alt" id="obuka">
+  <section class="section section-alt" id="tvoj-put">
     <div class="wrap">
-      <div class="section-intro">
-        <span class="eyebrow">Obuka B kategorije</span>
-        <h2>Kako izgleda put do dozvole</h2>
-        <p>Obuka ide u tri koraka. Svaki od njih vodi neko ko je taj deo posla radio bezbroj puta.</p>
+      <div class="section-head">
+        <span class="eyebrow">Tvoj put</span>
+        <h2>Kako se počinje</h2>
+        <p>Ovako izgleda put od prvog dolaska u Golubačku do vozačke dozvole.</p>
       </div>
-      <div class="cards-grid">
-        <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"></path><path d="M4 19.5V6.5"></path><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="11" x2="16" y2="11"></line></svg>
-          <h3>Teorijska nastava</h3>
-          <p>Predavanja u učionici na Golubačkoj 4. Prolazimo znakove, pravila i situacije iz saobraćaja na konkretnim primerima, ne samo iz udžbenika.</p>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <h3>Prvo dođeš na kafu</h3>
+            <p>Ako ti je sve ovo novo ili biraš između nekoliko škola, svrati kod nas. Mi častimo kafom, a ti pitaš šta te zanima.</p>
+            <p>Objasnimo ti kako obuka izgleda, koliko traje i šta te čeka na ispitu. Povedi drugara ili roditelje ako hoćeš. Ako ti se ne svidi, nema ljutnje, bila je samo kafa.</p>
+          </div>
         </div>
-        <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="7" rx="2"></rect><circle cx="7.5" cy="17" r="1.6"></circle><circle cx="16.5" cy="17" r="1.6"></circle><path d="M5 10l1.5-4h11L19 10"></path></svg>
-          <h3>Praktična vožnja</h3>
-          <p>Sedate za volan naših vozila, vozite kroz Vračar i okolinu, učite parkiranje, vožnju unazad i snalaženje u gužvi.</p>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <h3>Upišeš se i krećeš</h3>
+            <p>Ne čekaš da se skupi nova grupa. Kad potpišeš ugovor, dogovaramo prvi termin za tu nedelju.</p>
+          </div>
         </div>
-        <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
-          <h3>Priprema za ispit</h3>
-          <p>Pred ispit vozimo rute koje se koriste na proveri znanja, uvežbavamo poligon i radimo probne vožnje da ispit ne bude iznenađenje.</p>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <h3>Teorijska obuka</h3>
+            <p>Teorija zvuči kao smor, znamo. Kod nas nije bubanje znakova napamet.</p>
+            <p>Prolazimo kroz situacije koje te stvarno čekaju: kružni tok kod Autokomande, uključivanje u traku, semafor sa strelicom. Kad razumeš zašto je pravilo takvo, ne moraš da ga učiš napamet.</p>
+          </div>
         </div>
+
+        <div class="step">
+          <div class="step-num">04</div>
+          <div>
+            <h3>Teorijski ispit</h3>
+            <p>Pre izlaska prolazimo testove zajedno, sve dok ti pitanja ne krenu od ruke. Na ispit izlaziš kad si spreman.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">05</div>
+          <div>
+            <h3>Lekarsko uverenje i prva pomoć</h3>
+            <p>Dva papira koja ti trebaju za dalje. Možeš ih izvaditi i pre teorijskog ispita da ne gubiš vreme između dva koraka. Pitaj nas pa ti kažemo gde i kako.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">06</div>
+          <div>
+            <h3>Praktična obuka</h3>
+            <p>Sedaš za volan sa instruktorom. Ako ti treba još krugova pre prve veće raskrsnice, vozićeš ih.</p>
+            <p>Nema kalupa u koji moraš da staneš. Ide se tvojim tempom, a instruktor te ne požuruje.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">07</div>
+          <div>
+            <h3>Polaganje vožnje</h3>
+            <p>Ispit ima dva dela. Prvo poligonske radnje, pa vožnja kroz grad. Ceo ispit traje oko 45 minuta.</p>
+            <p>Pre toga provozamo rute na kojima se polaže, tako da ti na ispitu ništa nije novo.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">08</div>
+          <div>
+            <h3>Vozačka dozvola</h3>
+            <p>Sad ti častiš. To je ceo posao.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <div class="billboard">
-    <img src="assets/monca-prima-slider-1-bilbord.jpg" alt="Bilbord auto škole Monca Prima sa vozilom za obuku i kontakt podacima, Golubačka 4">
-  </div>
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Provezi svoj prvi krug sa nama</h2>
+      <p>Pozovi 011/3860 666 ili svrati u Golubačku 4. Dogovaramo termin kad tebi odgovara.</p>
+      <a href="#kontakt" class="btn">Upiši se</a>
+    </div>
+  </section>
 
-  <section class="section" id="zasto-mi">
-    <div class="wrap why-grid">
-      <div>
-        <span class="eyebrow">Zašto mi</span>
-        <h2>Ono što polaznici najviše pominju</h2>
-        <ul class="why-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
-            <div>
-              <h3>Instruktori koji ne žure</h3>
-              <p>Ako niste sigurni u nešto, vozimo taj deo puta ponovo. Nema utrke da čas prođe brže.</p>
-            </div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
-            <div>
-              <h3>Vozila spremna za vožnju</h3>
-              <p>Automobili su redovno servisirani, čisti i imaju duplu komandu kočnice za instruktora.</p>
-            </div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
-            <div>
-              <h3>Lokacija na Vračaru</h3>
-              <p>Golubačka 4 je blizu Slavije i Neimara, dostupna autobusom, tramvajem i pešaka iz centra.</p>
-            </div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
-            <div>
-              <h3>Termini po dogovoru</h3>
-              <p>Radimo i posle podne i uveče, jer znamo da većina polaznika ima posao ili faks tokom dana.</p>
-            </div>
-          </li>
-        </ul>
+  <section class="section" id="benefiti">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Benefiti</span>
+        <h2>Šta dobijaš kada se upišeš</h2>
       </div>
-      <div class="why-image">
-        <img src="assets/DSC_9468-scaled.jpg" alt="Unutrašnjost automobila za obuku vožnje, volan i komandna tabla">
+      <div class="cards">
+
+        <div class="card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path></svg>
+          <h3>Instruktora koji te vodi do kraja</h3>
+          <p>Voziš sa istim instruktorom od prvog časa do ispita. On zna gde ti zapinje i šta treba da vežbate pre izlaska.</p>
+        </div>
+
+        <div class="card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18"></path><path d="M8 2v4"></path><path d="M16 2v4"></path></svg>
+          <h3>Termine koji tebi odgovaraju</h3>
+          <p>Časove zakazujemo oko škole, fakulteta ili posla. Radimo svaki radni dan od 9 do 20, pa se termin uvek nađe.</p>
+        </div>
+
+        <div class="card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg>
+          <h3>Testove koje vežbamo zajedno</h3>
+          <p>Ne ostavljamo te da sam bubaš pitanja pred ispit. Testove prolazimo na časovima i vraćamo se na ono što ti nije jasno.</p>
+        </div>
+
+        <div class="card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-9A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+          <h3>Broj koji možeš da zoveš i posle</h3>
+          <p>Kad ti nešto zapne u saobraćaju posle dozvole, zoveš i pitaš. Broj ostaje isti, a mi smo i dalje u Golubačkoj 4.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <section class="section section-alt" id="galerija">
     <div class="wrap">
-      <div class="section-intro">
-        <span class="eyebrow">Galerija</span>
-        <h2>Vozila i prostor škole</h2>
-        <p>Nekoliko kadrova iz škole – vozila kojima vozite i učionica u kojoj slušate teoriju.</p>
+      <div class="section-head">
+        <span class="eyebrow">Škola izbliza</span>
+        <h2>Vozila kojima voziš</h2>
+        <p>Voziš na Toyoti Yaris. Vozila su servisirana i ista su ona na kojima izlaziš na ispit.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="assets/DSC_9296-2-scaled-e1764006934305.jpg" alt="Tri vozila auto škole Monca Prima parkirana jedno pored drugog, sa oznakama za obuku vozača">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/DSC_9468-scaled.jpg" alt="Volan i komandna tabla vozila za obuku vožnje">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/WhatsApp-Image-2025-11-11-at-18.17.19-1.jpeg" alt="Instruktorka drži teorijsko predavanje u učionici auto škole">
-        </div>
+      <div class="gallery">
+        <img src="assets/DSC_9296-2-scaled-e1764006934305.jpg" alt="Tri bela vozila auto škole Monca Prima sa krovnim oznakama za obuku vozača, parkirana jedno pored drugog">
+        <img src="assets/DSC_9468-scaled.jpg" alt="Unutrašnjost vozila za obuku, volan i komandna tabla">
       </div>
     </div>
   </section>
 
-  <section class="section" id="kontakt">
+  <section class="section" id="pitanja">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Pitanja i odgovori</span>
+        <h2>Česta pitanja</h2>
+      </div>
+      <div class="faq">
+
+        <details>
+          <summary>Sa koliko godina mogu da počnem obuku za B kategoriju?</summary>
+          <p>Obuku možeš da počneš sa 16 godina i tada možeš da polažeš teorijski ispit. Vožnja se polaže kada napuniš 17, i tada dobijaš probnu vozačku dozvolu.</p>
+        </details>
+
+        <details>
+          <summary>Koliko traje obuka i kada mogu da počnem?</summary>
+          <p>Ne čekaš novu grupu. Prvi termin dogovaramo za tu nedelju kad se upišeš.</p>
+          <p>Obuka najčešće traje dva do tri meseca, zavisno od toga koliko često možeš na časove. Ako ti se žuri, zakazujemo gušće.</p>
+        </details>
+
+        <details>
+          <summary>Koliko košta obuka i može li na rate?</summary>
+          <p>Cenu obuke za vozače propisuje Vlada Srbije i ista je u svim auto školama. Razlika je u tome šta dobiješ za te pare.</p>
+          <p>Za plaćanje na rate se dogovaramo pri upisu. Pozovi 011/3860 666 pa ti kažemo tačan iznos i uslove.</p>
+        </details>
+
+        <details>
+          <summary>Ko potpisuje ugovor sa školom?</summary>
+          <p>Ako imaš 18 godina, ugovor potpisuješ sam. Ako nemaš, dolaziš sa roditeljem ili starateljem. Za upis je potrebna lična karta, a kod maloletnih kandidata i lična karta roditelja.</p>
+        </details>
+
+        <details>
+          <summary>Mogu li da preskočim neki čas?</summary>
+          <p>Ne možeš. Broj časova propisan je zakonom i isti je u svakoj školi. Nema prečice, ali ima tempa koji tebi odgovara.</p>
+        </details>
+
+        <details>
+          <summary>Kako to da su neke škole jeftinije?</summary>
+          <p>Najčešće tako što skrate obuku i preskoče vožnju koja se ne polaže na ispitu. To kandidat plati kasnije, kroz ponovno polaganje ili kroz to što se posle dozvole ne usudi da izađe u gust saobraćaj.</p>
+        </details>
+
+        <details>
+          <summary>Koliko traje probna dozvola?</summary>
+          <p>Ako položiš sa navršenih 19 godina, probna dozvola traje dve godine. Ako položiš pre 19. rođendana, traje do 21. godine.</p>
+          <p>Dok je imaš, na vozilu nosiš oznaku P i važe ograničenja koja ti objasnimo na obuci.</p>
+        </details>
+
+        <details>
+          <summary>Gde se nalazite i kako da se upišem?</summary>
+          <p>Golubačka 4 na Vračaru. Pozoveš 011/3860 666 i dogovorimo termin, ili jednostavno svratiš u radno vreme, radnim danima od 9 do 20.</p>
+          <p>Ponesi ličnu kartu i za pola sata je upis gotov.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="kontakt">
     <div class="wrap contact-grid">
       <div>
         <span class="eyebrow">Kontakt</span>
-        <h2>Javite se, dogovorimo termin</h2>
-        <p style="color:var(--gray); font-size:16px;">Pozovite, pišite ili navratite do škole na Golubačkoj 4. Odgovaramo brzo i dogovaramo prvi čas već za tu nedelju.</p>
-        <ul class="contact-info-list">
+        <h2>Javi se, dogovaramo termin</h2>
+        <p style="color:var(--gray); font-size:17px; margin-top:16px;">Pozovi, piši ili svrati do škole. Javljamo se isti dan i dogovaramo prvi termin za tu nedelju.</p>
+        <ul class="contact-list">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
             Golubačka 4, Vračar, Beograd
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2z"></path></svg>
-            011/3860 666 &nbsp;/&nbsp; 060/0860 668
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2z"></path></svg>
+            <a href="tel:+381113860666">011/3860 666</a> &nbsp;/&nbsp; <a href="tel:+38160860668">060/0860 668</a>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="M4 6l8 7 8-7"></path></svg>
-            info@moncaprima.rs
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><path d="M4 6l8 7 8-7"></path></svg>
+            <a href="mailto:info@moncaprima.rs">info@moncaprima.rs</a>
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
-            Ponedeljak – petak, 09:00 – 20:00
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+            Ponedeljak - petak, 09:00 - 20:00
           </li>
         </ul>
         <div class="map-placeholder">
-          MAPA – GOLUBAČKA 4, VRAČAR, BEOGRAD
+          MAPA - GOLUBAČKA 4, VRAČAR, BEOGRAD
         </div>
       </div>
-      <div class="contact-form">
-        <h3 style="font-family:'Oswald',sans-serif; text-transform:uppercase; font-size:20px; margin-bottom:24px;">Pošaljite upit</h3>
+      <div class="form-box">
+        <h3>Zakaži razgovor</h3>
         <form action="#" method="get">
           <div class="form-group">
             <label for="ime">Ime i prezime</label>
-            <input type="text" id="ime" name="ime" placeholder="Vaše ime">
+            <input type="text" id="ime" name="ime" placeholder="Tvoje ime">
           </div>
           <div class="form-group">
             <label for="telefon">Telefon</label>
@@ -897,9 +891,9 @@
           </div>
           <div class="form-group">
             <label for="poruka">Poruka</label>
-            <textarea id="poruka" name="poruka" placeholder="Napišite kada vam odgovara termin"></textarea>
+            <textarea id="poruka" name="poruka" placeholder="Napiši kada ti odgovara da svratiš"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%; border-radius:8px;">Pošalji upit</button>
+          <button type="submit" class="btn">Pošalji</button>
         </form>
       </div>
     </div>
@@ -912,28 +906,28 @@
           <img src="assets/logo.png" alt="Auto škola Monca Prima logo">
           <p>Auto škola Monca Prima, Golubačka 4, Vračar, Beograd. Obuka vozača B kategorije, od prvog časa do ispita.</p>
         </div>
-        <div class="footer-col">
+        <div>
           <h4>Stranica</h4>
           <ul>
-            <li><a href="#o-nama">O nama</a></li>
-            <li><a href="#obuka">Obuka</a></li>
-            <li><a href="#zasto-mi">Zašto mi</a></li>
-            <li><a href="#galerija">Galerija</a></li>
+            <li><a href="#o-nama">O školi</a></li>
+            <li><a href="#tvoj-put">Tvoj put</a></li>
+            <li><a href="#benefiti">Šta dobijaš</a></li>
+            <li><a href="#pitanja">Česta pitanja</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div>
           <h4>Kontakt</h4>
           <ul>
             <li>Golubačka 4, Vračar</li>
-            <li>011/3860 666</li>
-            <li>060/0860 668</li>
-            <li>info@moncaprima.rs</li>
+            <li><a href="tel:+381113860666">011/3860 666</a></li>
+            <li><a href="tel:+38160860668">060/0860 668</a></li>
+            <li><a href="mailto:info@moncaprima.rs">info@moncaprima.rs</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2024 Auto škola Monca Prima. Sva prava zadržana.</span>
+        <span>© 2026 Auto škola Monca Prima. Sva prava zadržana.</span>
         <span>moncaprima.rs</span>
       </div>
     </div>
@@ -945,14 +939,12 @@
 
     hamburgerBtn.addEventListener('click', function () {
       const isOpen = mobileMenu.classList.toggle('open');
-      hamburgerBtn.classList.toggle('active');
       hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     document.querySelectorAll('.mobile-menu a').forEach(function (link) {
       link.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
-        hamburgerBtn.classList.remove('active');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
       });
     });
